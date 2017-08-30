@@ -1,0 +1,29 @@
+{
+    "name": "applicazza/subscribership",
+    "description": "Laravel subscriptions engine",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Artyom Sokolov",
+            "email": "artyom@applicazza.com"
+        }
+    ],
+    "require": {
+        "illuminate/support": "5.4.*"
+    },
+    "require-dev": {
+        "orchestra/testbench": "3.4.*",
+        "phpunit/phpunit": "~6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Applicazza\\Subscribership\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Applicazza\\Subscribership\\Tests\\": "tests/"
+        }
+    }
+}
