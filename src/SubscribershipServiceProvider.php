@@ -15,8 +15,10 @@ class SubscribershipServiceProvider extends ServiceProvider
     {
         $this->publishConfiguration();
 
-        if (!Subscribership::skipsMigrations()) {
+        if (Subscribership::loadsMigrations()) {
             $this->loadMigrations();
+        } else {
+            $this->publishMigrations();
         }
     }
 

@@ -11,21 +11,21 @@ class Subscribership
     /**
      * @var bool
      */
-    protected static $skip_migrations = false;
+    protected static $load_migrations = true;
 
     /**
      *
      */
     public static function skipMigrations()
     {
-        static::$skip_migrations = true;
+        static::$load_migrations = false;
     }
 
     /**
      * @return bool
      */
-    public static function skipsMigrations()
+    public static function loadsMigrations()
     {
-        return static::$skip_migrations;
+        return static::$load_migrations;
     }
 }
