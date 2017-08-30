@@ -29,7 +29,7 @@ Publish configuration file and modify values in it according to your needs (opti
 php artisan vendor:publish --provider="Applicazza\Subscribership\SubscribershipServiceProvider" --tag=config
 ```
 
-Modify your application's model that should be subcribable to plans by implementing ```ISubscriber``` interface and attaching ```Subscribeable``` trait. For example
+Modify your application's model that should be subcribable to plans by implementing ```ISubscriber``` interface and attaching ```Subscribable``` trait. For example
 
 ```php
 class Team extends Model implements ISubscriber
