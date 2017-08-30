@@ -34,7 +34,7 @@ Modify your application's model that should be subcribable to plans by implement
 ```php
 class Team extends Model implements ISubscriber
 {
-    use Subscribeable, SoftDeletes;
+    use Subscribable, SoftDeletes;
 }
 ```
 

@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Concerns\HasRelationships;
  * Trait Subscribeable
  * @package Applicazza\Subscribership
  */
-trait Subscribeable
+trait Subscribable
 {
     use HasRelationships;
 
