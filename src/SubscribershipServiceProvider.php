@@ -14,7 +14,10 @@ class SubscribershipServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->publishConfiguration();
-        $this->loadMigrations();
+
+        if (!Subscribership::skipsMigrations()) {
+            $this->loadMigrations();
+        }
     }
 
     /**

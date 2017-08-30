@@ -15,7 +15,7 @@ class CreatePlansTable extends Migration
     {
         Schema::create('plans', function (Blueprint $table) {
             $table->increments('id');
-            $table->json('details')->nullable();
+            $table->json('features')->nullable();
             $table->timestamp('archived_at')->nullable();
             $table->timestamps();
             $table->softDeletes();

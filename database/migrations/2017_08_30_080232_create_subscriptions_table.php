@@ -18,7 +18,7 @@ class CreateSubscriptionsTable extends Migration
             $table->unsignedInteger('plan_id');
             $table->uuid('subscribable_id');
             $table->string('subscribable_type');
-            $table->json('usage')->nullable();
+            $table->json('features_usage')->nullable();
             $table->timestamp('subscribed_at')->useCurrent();
             $table->timestamp('unsubscribed_at')->nullable();
         });

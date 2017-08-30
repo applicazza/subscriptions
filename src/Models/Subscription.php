@@ -27,7 +27,7 @@ class Subscription extends Model implements ISubscription
      * @var array
      */
     protected $casts = [
-        'usage' => 'object',
+        'features_usage' => 'object',
     ];
 
     /**

@@ -18,7 +18,7 @@ class Plan extends Model implements IPlan
      * @var array
      */
     protected $casts = [
-        'details' => 'object',
+        'features' => 'object',
     ];
 
     /**

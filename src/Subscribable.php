@@ -2,6 +2,7 @@
 
 namespace Applicazza\Subscribership;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Concerns\HasRelationships;
 
 /**
@@ -22,7 +23,7 @@ trait Subscribable
 
     /**
      * @param \Applicazza\Subscribership\IPlan $plan
-     * @return bool
+     * @return \Applicazza\Subscribership\ISubscription
      */
     public function subscribe(IPlan $plan)
     {
@@ -32,6 +33,15 @@ trait Subscribable
         $subscription = new $clazz;
         $subscription->subscribable()->associate($this);
         $subscription->plan()->associate($plan);
+        return $subscription->save();
+    }
+
+    /**
+     * @param \Illuminate\Database\Eloquent\Model|\Applicazza\Subscribership\ISubscription $subscription
+     */
+    public function unsubscribe(ISubscription $subscription)
+    {
+        $subscription->unsubscribed_at = Carbon::now();
         $subscription->save();
     }
 }
